@@ -10,4 +10,12 @@ const router = express_1.default.Router();
 router.post('/login', (req, res, next) => {
     authController_1.authController.login(req, res);
 });
+// POST refresh token to get a new access token
+router.post('/refresh-token', (req, res, next) => {
+    authController_1.authController.refreshToken(req, res);
+});
+// POST logout to invalidate tokens
+router.post('/logout', (req, res, next) => {
+    authController_1.authController.logout(req, res);
+});
 exports.default = router;
