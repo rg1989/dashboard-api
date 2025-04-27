@@ -8,7 +8,10 @@ export interface User {
 }
 
 // Mock database using an array to store users
-let users: User[] = [];
+let users: User[] = [{
+    username: 'admin', password: 'admin', id: '1', name: 'Admin', email: 'admin@example.com', phone: '1234567890'
+
+}];
 
 export const UserModel = {
     // Get all users
